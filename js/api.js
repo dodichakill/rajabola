@@ -6,7 +6,7 @@ const fetchData = (url) => {
   return fetch(url, {
     method: "GET",
     headers: {
-      // 'X-Auth-Token': `tinggal di isi API masing2 ya`
+      'X-Auth-Token': '7895e1a999c8472cb618931fe2c4ea16'
     }
   })
 }
@@ -51,7 +51,6 @@ function getArticles() {
                     </a>
                     <div class="card-content">
                       <span class="card-title truncate">${article.name}</span>
-                      <p>${article.address}</p>
                     </div>
                   </div>
                 `;
@@ -80,8 +79,7 @@ function getArticles() {
                   </div>
                 </a>
                 <div class="card-content">
-                  <span class="card-title truncate">${article.name}</span>
-                  <p>${article.address}</p>
+                  <span class="card-title truncate" style="font-size: bolder;">${article.name}</span>
                 </div>
               </div>
             `;
@@ -93,7 +91,7 @@ function getArticles() {
 }
 
 function getArticleById() {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     // Ambil nilai query parameter (?id=)
     var urlParams = new URLSearchParams(window.location.search);
     var idParam = urlParams.get("id");

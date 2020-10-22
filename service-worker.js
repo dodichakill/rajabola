@@ -1,4 +1,4 @@
-const CACHE_NAME = "firstpwa-v1";
+const CACHE_NAME = "secondpwa-v1";
 var urlsToCache = [
   "/",
   "/nav.html",
@@ -13,10 +13,17 @@ var urlsToCache = [
   "/js/api.js",
   "/js/nav.js",
   "/js/db.js",
+  "/js/sw-register.js",
   "/js/idb.js",
   "/js/script.js",
-  "/icon.png",
-  "https://fonts.googleapis.com/icon?family=Material+Icons"
+  "https://fonts.googleapis.com/icon?family=Material+Icons",
+  "/img/favicon-16.png",
+  "/img/favicon-32.png",
+  "/img/hero.jpg",
+  "/img/icon-192x192.png",
+  "/img/icon-256x256.png",
+  "/img/icon-384x384.png",
+  "/img/icon-512x512.png"
 ];
 
 self.addEventListener("install", function (event) {
