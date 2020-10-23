@@ -227,7 +227,6 @@ function getSavedArticles() {
                     <a class="btn-floating halfway-fab waves-effect waves-light red" id="deleted" onclick="deletedTeam(${article.id})"><i class="material-icons">delete</i></a>
                       <span class="card-title truncate">${article.name
         }</span>
-                      <p>${article.website}</p>
                     </div>
                   </div>
                 `;
@@ -241,18 +240,48 @@ function getSavedArticleById() {
   var urlParams = new URLSearchParams(window.location.search);
   var idParam = urlParams.get("id");
 
-  getById(idParam).then(function (article) {
+  getById(idParam).then(function (data) {
     articleHTML = '';
     var articleHTML = `
-    <div class="card">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img src="${article.crestUrl}" />
-      </div>
-      <div class="card-content">
-        <span class="card-title">${article.name}</span>
-        <p>${article.website}</p>
-      </div>
+    <div class="card" style="background-color: #8bcdcd;">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img src="${data.crestUrl}" height="300" width="300" />
     </div>
+    <div class="card-content">
+      <table class"striped highlight">
+        <thead>
+            <th> &nbsp; </th>
+            <th> <h4> ${data.name} </h4></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>founded</td>
+                <td>${data.founded}</td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td>${data.address}</td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>${data.email}</td>
+            </tr>
+            <tr>
+                <td>club Color</td>
+                <td>${data.clubColors}</td>
+            </tr>
+            <tr>
+                <td>venue</td>
+                <td>${data.venue}</td>
+            </tr>
+            <tr>
+                <td>lastUpdated</td>
+                <td>${data.lastUpdated}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
   `;
     // Sisipkan komponen card ke dalam elemen dengan id #content
     document.getElementById("body-content").innerHTML = articleHTML;
