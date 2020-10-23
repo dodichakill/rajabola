@@ -22,7 +22,7 @@ function saveForLater(team) {
 }
 
 function getAll() {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     dbPromised
       .then(function (db) {
         var tx = db.transaction("teams", "readonly");
@@ -37,7 +37,7 @@ function getAll() {
 
 
 function getById(id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     dbPromised
       .then(function (db) {
         var tx = db.transaction("teams", "readonly");

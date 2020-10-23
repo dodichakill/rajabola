@@ -217,7 +217,8 @@ function getSavedArticles() {
     articles.forEach(function (article) {
 
       articlesHTML += `
-                  <div class="card">
+                <div class="col l4 m6 s12">
+                  <div class="card z-depth-2">
                     <a href="./article.html?id=${article.id}&saved=true">
                       <div class="card-image waves-effect waves-block waves-light">
                         <img src="${article.crestUrl}" />
@@ -225,10 +226,10 @@ function getSavedArticles() {
                     </a>
                     <div class="card-content">
                     <a class="btn-floating halfway-fab waves-effect waves-light red" id="deleted" onclick="deletedTeam(${article.id})"><i class="material-icons">delete</i></a>
-                      <span class="card-title truncate">${article.name
-        }</span>
+                      <span class="card-title truncate">${article.name}</span>
                     </div>
                   </div>
+                </div>
                 `;
     });
     // Sisipkan komponen card ke dalam elemen dengan id #content
