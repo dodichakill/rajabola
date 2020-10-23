@@ -1,6 +1,8 @@
-#body-content{
+#articles{
     margin: 10px auto;
-    background-color: aquamarine;
+    background-color: #3797a4;
+    padding: 10px 0;
+    border-radius: 1em;
 }
 .card{
     width: 240px;
@@ -10,7 +12,7 @@
     margin-top: 10px;
 }
 footer{
-    background-color: lightblue;
+    background-color: #16697a;
     color: aliceblue;
     height: 120px;
     text-align: center;
@@ -18,6 +20,6 @@ footer{
     align-content: center;
     justify-content: center;
 }
-.card-title{
-    font-weight: 800;
+.hero{
+    margin-top: 10px;
 }

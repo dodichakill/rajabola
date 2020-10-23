@@ -1,4 +1,4 @@
-const CACHE_NAME = "secondpwa-v1";
+const CACHE_NAME = "secondpwa-v2";
 var urlsToCache = [
   "/",
   "/nav.html",
@@ -6,7 +6,6 @@ var urlsToCache = [
   "/article.html",
   "/pages/home.html",
   "/pages/about.html",
-  "/pages/contact.html",
   "/css/materialize.min.css",
   "/js/materialize.min.js",
   "/manifest.json",
@@ -15,7 +14,6 @@ var urlsToCache = [
   "/js/db.js",
   "/js/sw-register.js",
   "/js/idb.js",
-  "/js/script.js",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "/img/favicon-16.png",
   "/img/favicon-32.png",

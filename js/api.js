@@ -72,16 +72,18 @@ function getArticles() {
       var articlesHTML = "";
       data.teams.forEach(function (article) {
         articlesHTML += `
-              <div class="card">
+            <div class="col l4 m6 s12">
+              <div class="card z-depth-2">
                 <a href="./article.html?id=${article.id}">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img src="${article.crestUrl}" />
+                    <img src="${article.crestUrl}" width="240" height="240" />
                   </div>
                 </a>
                 <div class="card-content">
                   <span class="card-title" style="font-size: bolder;">${article.name}</span>
                 </div>
               </div>
+            </div>
             `;
       });
       // Sisipkan komponen card ke dalam elemen dengan id #content
@@ -104,7 +106,7 @@ function getArticleById() {
             
             <div class="card" width="400px">
               <div class="card-image waves-effect waves-block waves-light">
-                <img src="${data.crestUrl}" />
+                <img src="${data.crestUrl}" class="materialboxed" />
               </div>
               <div class="card-content">
                 <span class="card-title">${data.name}</span>
