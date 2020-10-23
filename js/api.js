@@ -103,16 +103,45 @@ function getArticleById() {
         if (response) {
           response.json().then(function (data) {
             var articleHTML = `
-            
-            <div class="card" width="400px">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img src="${data.crestUrl}" class="materialboxed" />
-              </div>
-              <div class="card-content">
-                <span class="card-title">${data.name}</span>
-                <p>${data.website} </p>
-              </div>
+            <div class="card" style="background-color: #8bcdcd;">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img src="${data.crestUrl}" height="300" width="300" />
             </div>
+            <div class="card-content">
+              <table class"striped highlight">
+                <thead>
+                    <th> &nbsp; </th>
+                    <th> <h4> ${data.name} </h4></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>founded</td>
+                        <td>${data.founded}</td>
+                    </tr>
+                    <tr>
+                        <td>address</td>
+                        <td>${data.address}</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>${data.email}</td>
+                    </tr>
+                    <tr>
+                        <td>club Color</td>
+                        <td>${data.clubColors}</td>
+                    </tr>
+                    <tr>
+                        <td>venue</td>
+                        <td>${data.venue}</td>
+                    </tr>
+                    <tr>
+                        <td>lastUpdated</td>
+                        <td>${data.lastUpdated}</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
           `;
             // Sisipkan komponen card ke dalam elemen dengan id #content
             document.getElementById("body-content").innerHTML = articleHTML;
@@ -132,13 +161,43 @@ function getArticleById() {
         // console.log(data);
         // Menyusun komponen card artikel secara dinamis
         var articleHTML = `
-          <div class="card" width="400px">
+          <div class="card" style="background-color: #8bcdcd;">
             <div class="card-image waves-effect waves-block waves-light">
-              <img src="${data.crestUrl}" width="400px" height="400px" />
+              <img src="${data.crestUrl}" height="300" width="300" />
             </div>
             <div class="card-content">
-              <span class="card-title">${data.name}</span>
-              <p>${data.website} </p>
+              <table class"striped highlight">
+                <thead>
+                    <th> &nbsp; </th>
+                    <th> <h4> ${data.name} </h4></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>founded</td>
+                        <td>${data.founded}</td>
+                    </tr>
+                    <tr>
+                        <td>address</td>
+                        <td>${data.address}</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>${data.email}</td>
+                    </tr>
+                    <tr>
+                        <td>club Color</td>
+                        <td>${data.clubColors}</td>
+                    </tr>
+                    <tr>
+                        <td>venue</td>
+                        <td>${data.venue}</td>
+                    </tr>
+                    <tr>
+                        <td>lastUpdated</td>
+                        <td>${data.lastUpdated}</td>
+                    </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         `;
