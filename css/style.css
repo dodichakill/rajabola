@@ -1,0 +1,23 @@
+#body-content{
+    margin: 10px auto;
+    background-color: aquamarine;
+}
+.card{
+    width: 240px;
+    margin: 10px auto;
+}
+.card img{
+    margin-top: 10px;
+}
+footer{
+    background-color: lightblue;
+    color: aliceblue;
+    height: 120px;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.card-title{
+    font-weight: 800;
+}

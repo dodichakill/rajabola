@@ -50,7 +50,7 @@ function getArticles() {
                       </div>
                     </a>
                     <div class="card-content">
-                      <span class="card-title truncate">${article.name}</span>
+                      <span class="card-title">${article.name}</span>
                     </div>
                   </div>
                 `;
@@ -79,7 +79,7 @@ function getArticles() {
                   </div>
                 </a>
                 <div class="card-content">
-                  <span class="card-title truncate" style="font-size: bolder;">${article.name}</span>
+                  <span class="card-title" style="font-size: bolder;">${article.name}</span>
                 </div>
               </div>
             `;
@@ -101,7 +101,8 @@ function getArticleById() {
         if (response) {
           response.json().then(function (data) {
             var articleHTML = `
-            <div class="card">
+            
+            <div class="card" width="400px">
               <div class="card-image waves-effect waves-block waves-light">
                 <img src="${data.crestUrl}" />
               </div>
@@ -129,9 +130,9 @@ function getArticleById() {
         // console.log(data);
         // Menyusun komponen card artikel secara dinamis
         var articleHTML = `
-          <div class="card">
+          <div class="card" width="400px">
             <div class="card-image waves-effect waves-block waves-light">
-              <img src="${data.crestUrl}" />
+              <img src="${data.crestUrl}" width="400px" height="400px" />
             </div>
             <div class="card-content">
               <span class="card-title">${data.name}</span>
