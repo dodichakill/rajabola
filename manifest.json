@@ -2,6 +2,7 @@
     "theme_color": "#35cef6",
     "background_color": "#35a5f6",
     "display": "standalone",
+    "gcm_sender_id": "273459238440",
     "scope": "/",
     "start_url": "/index.html",
     "name": "Raja Bola",

@@ -1,4 +1,4 @@
-const CACHE_NAME = "secondpwa-v3.1";
+const CACHE_NAME = "secondpwa-v3.2";
 var urlsToCache = [
   "/",
   "/nav.html",
@@ -15,6 +15,7 @@ var urlsToCache = [
   "/js/db.js",
   "/js/sw-register.js",
   "/js/notifikasi.js",
+  "/js/push.js",
   "/js/idb.js",
   "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
@@ -69,5 +70,26 @@ self.addEventListener("activate", function (event) {
         })
       );
     })
+  );
+});
+
+self.addEventListener('push', function(event) {
+  var body;
+  if (event.data) {
+    body = event.data.text();
+  } else {
+    body = 'Push message no payload';
+  }
+  var options = {
+    body: body,
+    icon: 'img/icon-192x192.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    }
+  };
+  event.waitUntil(
+    self.registration.showNotification('Push Notification', options)
   );
 });
