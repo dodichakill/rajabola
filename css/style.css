@@ -1,3 +1,6 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 #articles{
     margin: 10px auto;
     background-color: #3797a4;
@@ -22,4 +25,19 @@ footer{
 }
 .hero{
     margin-top: 10px;
+}
+p span {
+    background-color: aquamarine;
+    padding: .5em;
+}
+h3{
+    background-color: lightskyblue;
+    padding: .5em;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 1em;
+}
+.about {
+    letter-spacing: .2em;
+    line-height: 2em;
 }

@@ -1,4 +1,4 @@
-const CACHE_NAME = "secondpwa-v2";
+const CACHE_NAME = "secondpwa-v3";
 var urlsToCache = [
   "/",
   "/nav.html",
@@ -13,11 +13,13 @@ var urlsToCache = [
   "/js/nav.js",
   "/js/db.js",
   "/js/sw-register.js",
+  "/js/notifikasi.js",
   "/js/idb.js",
+  "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "/img/favicon-16.png",
   "/img/favicon-32.png",
-  "/img/hero.jpg",
+  "/img/banner.png",
   "/img/icon-192x192.png",
   "/img/icon-256x256.png",
   "/img/icon-384x384.png",
