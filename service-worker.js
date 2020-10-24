@@ -15,7 +15,7 @@ var urlsToCache = [
   "/js/db.js",
   "/js/sw-register.js",
   "/js/notifikasi.js",
-  "/js/push.js",
+  "/push.js",
   "/js/idb.js",
   "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap",
   "https://fonts.googleapis.com/icon?family=Material+Icons",

@@ -211,7 +211,6 @@ function getArticleById() {
 
 function getSavedArticles() {
   getAll().then(function (articles) {
-    console.log(articles);
     // Menyusun komponen card artikel secara dinamis
     var articlesHTML = "";
     articles.forEach(function (article) {

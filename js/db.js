@@ -17,7 +17,7 @@ function saveForLater(team) {
       return tx.complete;
     })
     .then(function () {
-      console.log("Artikel berhasil di simpan.");
+      console.log("Team berhasil di simpan.");
     });
 }
 
