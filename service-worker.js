@@ -1,4 +1,4 @@
-const CACHE_NAME = "secondpwa-v3.2";
+const CACHE_NAME = "secondpwa-v3.4.3";
 var urlsToCache = [
   "/",
   "/nav.html",
@@ -19,7 +19,17 @@ var urlsToCache = [
   "/js/idb.js",
   "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
-  "/img/favicon-16.png",
+  "https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUPjIg1_i6t8kCHKm459WxZcgvz8fZwnCo.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUPjIg1_i6t8kCHKm459WxZcgvz-PZwnCo.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUPjIg1_i6t8kCHKm459WxZcgvz8_ZwnCo.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUPjIg1_i6t8kCHKm459WxZcgvz8vZwnCo.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUPjIg1_i6t8kCHKm459WxZcgvz_PZw.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2",
+  "https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2",
   "/img/favicon-32.png",
   "/img/profile.jpeg",
   "/img/banner.jpg",

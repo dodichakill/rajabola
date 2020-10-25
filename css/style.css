@@ -1,5 +1,10 @@
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.container{
+    flex: 1 0 auto;
 }
 #articles{
     margin: 10px auto;
