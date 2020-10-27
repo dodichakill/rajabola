@@ -1,27 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   // Activate sidebar nav
-  var elems = document.querySelectorAll(".sidenav");
+  const elems = document.querySelectorAll(".sidenav");
   M.Sidenav.init(elems);
   loadNav();
 
   function loadNav() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = () => {
       if (this.readyState === 4) {
         if (this.status != 200) return;
 
         // Muat daftar tautan menu
-        document.querySelectorAll(".topnav, .sidenav").forEach(function(elm) {
+        document.querySelectorAll(".topnav, .sidenav").forEach( elm => {
           elm.innerHTML = xhttp.responseText;
         });
 
         // Daftarkan event listener untuk setiap tautan menu
         document
           .querySelectorAll(".sidenav a, .topnav a")
-          .forEach(function(elm) {
-            elm.addEventListener("click", function(event) {
+          .forEach( elm => {
+            elm.addEventListener("click", event => {
               // Tutup sidenav
-              var sidenav = document.querySelector(".sidenav");
+              const sidenav = document.querySelector(".sidenav");
               M.Sidenav.getInstance(sidenav).close();
 
               // Muat konten halaman yang dipanggil
