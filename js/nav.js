@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function loadNav() {
     let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = () => {
+    xhttp.onreadystatechange = function() {
       if (this.readyState === 4) {
         if (this.status != 200) return;
 
