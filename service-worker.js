@@ -1,4 +1,4 @@
-const CACHE_NAME = "secondpwa-v3.4.3";
+const CACHE_NAME = "secondpwa-v3.5.0";
 const urlsToCache = [
   "/",
   "/nav.html",
@@ -84,7 +84,7 @@ self.addEventListener("activate", event => {
 });
 
 self.addEventListener('push', event => {
-  const body;
+  let body;
   if (event.data) {
     body = event.data.text();
   } else {
