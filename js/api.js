@@ -46,7 +46,7 @@ function getArticles() {
                   <div class="card">
                     <a href="./article.html?id=${article.id}">
                       <div class="card-image waves-effect waves-block waves-light">
-                        <img src="${article.crestUrl}" />
+                        <img src="${article.crestUrl}" alt="logo"/>
                       </div>
                     </a>
                     <div class="card-content">
@@ -105,7 +105,7 @@ function getArticleById() {
             var articleHTML = `
             <div class="card" style="background-color: #8bcdcd; margin:10px 0; margin:10px 0;">
             <div class="card-image waves-effect waves-block waves-light">
-              <img src="${data.crestUrl}" height="300" width="300" />
+              <img src="${data.crestUrl}" height="300" width="300" alt="logo team"/>
             </div>
             <div class="card-content">
               <table class"striped highlight">
@@ -163,7 +163,7 @@ function getArticleById() {
         var articleHTML = `
         <div class="card" style="background-color: #8bcdcd; margin:10px 0;">
         <div class="card-image waves-effect waves-block waves-light">
-         <img src="${data.crestUrl}" height="300" width="300" />
+         <img src="${data.crestUrl}" height="300" width="300" alt="logo team"/>
         </div>
         <div class="card-content">
           <table class"striped highlight">
@@ -220,7 +220,7 @@ function getSavedArticles() {
                   <div class="card z-depth-2">
                     <a href="./article.html?id=${article.id}&saved=true">
                       <div class="card-image waves-effect waves-block waves-light">
-                        <img src="${article.crestUrl}" />
+                        <img src="${article.crestUrl}" alt="logo team"/>
                       </div>
                     </a>
                     <div class="card-content">
@@ -245,7 +245,7 @@ function getSavedArticleById() {
     var articleHTML = `
     <div class="card" style="background-color: #8bcdcd; margin:10px 0;">
       <div class="card-image waves-effect waves-block waves-light">
-       <img src="${data.crestUrl}" height="300" width="300" />
+       <img src="${data.crestUrl}" height="300" width="300" alt="logo team" />
       </div>
       <div class="card-content">
         <table class"striped highlight">

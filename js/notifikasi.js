@@ -18,6 +18,15 @@ if ("Notification" in window) {
         }
         
         if (('PushManager' in window)) {
+          navigator.serviceWorker.ready.then(() => {
+            if (('PushManager' in window)) {
+                navigator.serviceWorker.getRegistration().then((registration) => {
+                    registration.pushManager.subscribe({
+                        ...
+                    });
+                });
+            }
+        });
           navigator.serviceWorker.getRegistration().then(function(registration) {
               registration.pushManager.subscribe({
                   userVisibleOnly: true,
