@@ -164,9 +164,10 @@ function getArticleById() {
         let articleHTML = `
         <div class="card" style="background-color: #28abb9; margin:10px 0;">
         <div class="card-image waves-effect waves-block waves-light">
-         <img src="${data.crestUrl}" height="300" width="300" alt="logo team"/>
+        <img src="${data.crestUrl}" height="300" width="300" alt="logo team" style="margin-top:1.7em;" />
         </div>
         <div class="card-content">
+          <div class="centered amber lighten-2" style="border-radius:1em;">
           <table class"striped highlight">
             <thead>
                 <th> &nbsp; </th>
@@ -199,8 +200,10 @@ function getArticleById() {
                 </tr>
             </tbody>
           </table>
+          </div>
         </div>
       </div>
+
         `;
         // Sisipkan komponen card ke dalam elemen dengan id #content
         document.getElementById("body-content").innerHTML = articleHTML;
@@ -244,45 +247,47 @@ function getSavedArticleById() {
   getById(idParam).then(function (data) {
     articleHTML = '';
     var articleHTML = `
-    <div class="card" style="background-color: #28abb9; margin:10px 0;">
-      <div class="card-image waves-effect waves-block waves-light">
-       <img src="${data.crestUrl}" height="300" width="300" alt="logo team" />
+      <div class="card" style="background-color: #28abb9; margin:10px 0;">
+        <div class="card-image waves-effect waves-block waves-light">
+        <img src="${data.crestUrl}" height="300" width="300" alt="logo team" style="margin-top:1.7em;" />
+        </div>
+        <div class="card-content">
+          <div class="centered amber lighten-2" style="border-radius:1em;">
+          <table class"striped highlight">
+            <thead>
+                <th> &nbsp; </th>
+                <th> <h4> ${data.name} </h4></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>founded</td>
+                    <td>${data.founded}</td>
+                </tr>
+                <tr>
+                    <td>address</td>
+                    <td>${data.address}</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td>${data.email}</td>
+                </tr>
+                <tr>
+                    <td>club Color</td>
+                    <td>${data.clubColors}</td>
+                </tr>
+                <tr>
+                    <td>venue</td>
+                    <td>${data.venue}</td>
+                </tr>
+                <tr>
+                    <td>lastUpdated</td>
+                    <td>${data.lastUpdated}</td>
+                </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
       </div>
-      <div class="card-content">
-        <table class"striped highlight">
-          <thead>
-              <th> &nbsp; </th>
-              <th> <h4> ${data.name} </h4></th>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>founded</td>
-                  <td>${data.founded}</td>
-              </tr>
-              <tr>
-                  <td>address</td>
-                  <td>${data.address}</td>
-              </tr>
-              <tr>
-                  <td>email</td>
-                  <td>${data.email}</td>
-              </tr>
-              <tr>
-                  <td>club Color</td>
-                  <td>${data.clubColors}</td>
-              </tr>
-              <tr>
-                  <td>venue</td>
-                  <td>${data.venue}</td>
-              </tr>
-              <tr>
-                  <td>lastUpdated</td>
-                  <td>${data.lastUpdated}</td>
-              </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   `;
     // Sisipkan komponen card ke dalam elemen dengan id #content
     document.getElementById("body-content").innerHTML = articleHTML;
