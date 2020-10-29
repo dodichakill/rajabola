@@ -40,7 +40,7 @@ function getArticles() {
     caches.match(endPointTeams).then(function (response) {
       if (response) {
         response.json().then(function (data) {
-          var articlesHTML = "";
+          let articlesHTML = "";
           data.teams.forEach(function (article) {
             articlesHTML += `
                   <div class="card">
@@ -69,7 +69,7 @@ function getArticles() {
       // Objek/array JavaScript dari response.json() masuk lewat data.
 
       // Menyusun komponen card artikel secara dinamis
-      var articlesHTML = "";
+      let articlesHTML = "";
       data.teams.forEach(function (article) {
         articlesHTML += `
             <div class="col l4 m6 s12">
@@ -95,15 +95,16 @@ function getArticles() {
 function getArticleById() {
   return new Promise(function (resolve) {
     // Ambil nilai query parameter (?id=)
-    var urlParams = new URLSearchParams(window.location.search);
-    var idParam = urlParams.get("id");
+    let urlParams = new URLSearchParams(window.location.search);
+    let idParam = urlParams.get("id");
 
     if ("caches" in window) {
       caches.match(base_url + "teams/" + idParam).then(function (response) {
         if (response) {
           response.json().then(function (data) {
-            var articleHTML = `
-            <div class="card" style="background-color: #8bcdcd; margin:10px 0; margin:10px 0;">
+            let articleHTML = `
+            
+            <div class="card" style="background-color: #28abb9; margin:10px 0; margin:10px 0;">
             <div class="card-image waves-effect waves-block waves-light">
               <img src="${data.crestUrl}" height="300" width="300" alt="logo team"/>
             </div>
@@ -160,8 +161,8 @@ function getArticleById() {
         // Objek JavaScript dari response.json() masuk lewat variabel data.
         // console.log(data);
         // Menyusun komponen card artikel secara dinamis
-        var articleHTML = `
-        <div class="card" style="background-color: #8bcdcd; margin:10px 0;">
+        let articleHTML = `
+        <div class="card" style="background-color: #28abb9; margin:10px 0;">
         <div class="card-image waves-effect waves-block waves-light">
          <img src="${data.crestUrl}" height="300" width="300" alt="logo team"/>
         </div>
@@ -212,7 +213,7 @@ function getArticleById() {
 function getSavedArticles() {
   getAll().then(function (articles) {
     // Menyusun komponen card artikel secara dinamis
-    var articlesHTML = "";
+    let articlesHTML = "";
     articles.forEach(function (article) {
 
       articlesHTML += `
@@ -237,13 +238,13 @@ function getSavedArticles() {
 }
 
 function getSavedArticleById() {
-  var urlParams = new URLSearchParams(window.location.search);
-  var idParam = urlParams.get("id");
+  let urlParams = new URLSearchParams(window.location.search);
+  let idParam = urlParams.get("id");
 
   getById(idParam).then(function (data) {
     articleHTML = '';
     var articleHTML = `
-    <div class="card" style="background-color: #8bcdcd; margin:10px 0;">
+    <div class="card" style="background-color: #28abb9; margin:10px 0;">
       <div class="card-image waves-effect waves-block waves-light">
        <img src="${data.crestUrl}" height="300" width="300" alt="logo team" />
       </div>
