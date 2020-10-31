@@ -43,6 +43,12 @@ workbox.routing.registerRoute(
   })
 );
 
+workbox.routing.registerRoute(
+  new RegExp("https://api.football-data.org/v2/"),
+  workbox.strategies.staleWhileRevalidate({ 
+      cacheName: "api-response",
+  })
+);
 
 self.addEventListener('push', event => {
   let body;
