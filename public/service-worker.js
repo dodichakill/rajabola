@@ -6,7 +6,7 @@ else
   console.log('Workbox gagal dimuat');
 
 
-service worker baru
+
 workbox.precaching.precacheAndRoute([
   { url: '/index.html', revision: '1' },  
   { url: "/", revision: '1' },
